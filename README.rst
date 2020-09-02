@@ -17,7 +17,7 @@ a URL and can be found on the "About" screen in the MPX console).
 
 .. code-block:: python
 
-    import mpxapi
+    from mpxapi import MPXApi
     api = MPXApi(username=username, password=password, account=account, tld="eu")
 
     params= {"schema": "2.15.0", "searchSchema": "1.3.0", "range": "-1", "pretty": "true"}
@@ -34,7 +34,7 @@ Another option is to use premade models for some of the data services
     api = MPXApi(username=username, password=password, account=account, tld="eu")
     programs = Programs(api=api)
 
-    programs.get({"range"; "-1"})
+    programs.get({"range": "-1"})
 
 
 To sign out after using the API (thereby invalidating the token)
